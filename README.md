@@ -1,5 +1,6 @@
 > [!NOTE]
 > If you need English, please click [here](https://github.com/EverythingSuckz/TG-FileStreamBot)
+> 你想查看 英文 文档 或者原仓库？ 请[点我](https://github.com/EverythingSuckz/TG-FileStreamBot)
 
 <h1 align="center">Telegram File Stream Bot Chinese / Telegram 文件直链机器人中文版</h1>
 <p align="center">
