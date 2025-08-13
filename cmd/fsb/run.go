@@ -65,7 +65,7 @@ func getRouter(log *zap.Logger) *gin.Engine {
 	router.Use(gin.ErrorLogger())
 	router.GET("/", func(ctx *gin.Context) {
 		ctx.JSON(http.StatusOK, types.RootResponse{
-			Message: "Server is running.",
+			Message: "Server is running./服务正常运行中...",
 			Ok:      true,
 			Uptime:  utils.TimeFormat(uint64(time.Since(startTime).Seconds())),
 			Version: versionString,

@@ -23,9 +23,9 @@ func start(ctx *ext.Context, u *ext.Update) error {
 		return dispatcher.EndGroups
 	}
 	if len(config.ValueOf.AllowedUsers) != 0 && !utils.Contains(config.ValueOf.AllowedUsers, chatId) {
-		ctx.Reply(u, "You are not allowed to use this bot.", nil)
+		ctx.Reply(u, "啊哦哦，你没有权限使用我呀~联系一下管理员叭~", nil)
 		return dispatcher.EndGroups
 	}
-	ctx.Reply(u, "Hi, send me any file to get a direct streamble link to that file.", nil)
+	ctx.Reply(u, "嗨，欢迎使用TgfileBot，你只需要丢进来图片、视频或者其他文件我都可以帮你转换成链接喔~", nil)
 	return dispatcher.EndGroups
 }

@@ -47,7 +47,7 @@ func sendLink(ctx *ext.Context, u *ext.Update) error {
 		return dispatcher.EndGroups
 	}
 	if len(config.ValueOf.AllowedUsers) != 0 && !utils.Contains(config.ValueOf.AllowedUsers, chatId) {
-		ctx.Reply(u, "You are not allowed to use this bot.", nil)
+		ctx.Reply(u, "啊哦哦，你没有权限使用我呀~联系一下管理员叭~", nil)
 		return dispatcher.EndGroups
 	}
 	supported, err := supportedMediaFilter(u.EffectiveMessage)
@@ -55,7 +55,7 @@ func sendLink(ctx *ext.Context, u *ext.Update) error {
 		return err
 	}
 	if !supported {
-		ctx.Reply(u, "Sorry, this message type is unsupported.", nil)
+		ctx.Reply(u, "啊哦哦，这种消息类型不支持哦~", nil)
 		return dispatcher.EndGroups
 	}
 	update, err := utils.ForwardMessages(ctx, chatId, config.ValueOf.LogChannelID, u.EffectiveMessage.ID)
@@ -83,14 +83,14 @@ func sendLink(ctx *ext.Context, u *ext.Update) error {
 	row := tg.KeyboardButtonRow{
 		Buttons: []tg.KeyboardButtonClass{
 			&tg.KeyboardButtonURL{
-				Text: "Download",
+				Text: "立即下载⤵️",
 				URL:  link + "&d=true",
 			},
 		},
 	}
 	if strings.Contains(file.MimeType, "video") || strings.Contains(file.MimeType, "audio") || strings.Contains(file.MimeType, "pdf") {
 		row.Buttons = append(row.Buttons, &tg.KeyboardButtonURL{
-			Text: "Stream",
+			Text: "在线播放🎦",
 			URL:  link,
 		})
 	}
