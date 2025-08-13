@@ -79,7 +79,7 @@
 > [!NOTE]
 > 此方式部署的是最新 docker 发行版而非最新提交。使用预构建容器，部署速度更快。
 
-[![一键部署到 Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=docker&name=file-stream-bot&image=ghcr.io/everythingsuckz/fsb:latest&env%5BAPI_HASH%5D=&env%5BAPI_ID%5D=&env%5BAPI_HASH%5D=&env%5BAPI_ID%5D=&env%5BBOT_TOKEN%5D=&env%5BHOST%5D=https%3A%2F%2F%7B%7B+KOYEB_PUBLIC_DOMAIN+%7D%7D&env%5BLOG_CHANNEL%5D=&env%5BPORT%5D=8038&ports=8038%3Bhttp%3B%2F&hc_protocol%5B8038%5D=tcp&hc_grace_period%5B8038%5D=5&hc_interval%5B8038%5D=30&hc_restart_limit%5B8038%5D=3&hc_timeout%5B8038%5D=5&hc_path%5B8038%5D=%2F&hc_method%5B8038%5D=get)
+[![一键部署到 Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=docker&name=file-stream-bot&image=ghcr.io/yanjie233/fsb:latest&env%5BAPI_HASH%5D=&env%5BAPI_ID%5D=&env%5BAPI_HASH%5D=&env%5BAPI_ID%5D=&env%5BBOT_TOKEN%5D=&env%5BHOST%5D=https%3A%2F%2F%7B%7B+KOYEB_PUBLIC_DOMAIN+%7D%7D&env%5BLOG_CHANNEL%5D=&env%5BPORT%5D=8038&ports=8038%3Bhttp%3B%2F&hc_protocol%5B8038%5D=tcp&hc_grace_period%5B8038%5D=5&hc_interval%5B8038%5D=30&hc_restart_limit%5B8038%5D=3&hc_timeout%5B8038%5D=5&hc_path%5B8038%5D=%2F&hc_method%5B8038%5D=get)
 
 ### Deploy to Heroku
 
@@ -111,7 +111,7 @@ Press the below button to fast deploy to Heroku
 <hr>
 
 ### 下载并运行
-- 前往 [releases](https://github.com/EverythingSuckz/TG-FileStreamBot/releases) 下载适合你平台的预发布版本。
+- 前往 [releases](https://github.com/yanjie233/TG-FileStreamBot/releases) 下载适合你平台的预发布版本。
 - 解压到文件夹。
 - 新建 `fsb.env` 文件，添加所有变量（参考 `fsb.sample.env`）。
 - 给可执行文件加权限（Windows 不需要）。
@@ -123,7 +123,7 @@ Press the below button to fast deploy to Heroku
 
 - 克隆仓库
 ```sh
-git clone https://github.com/EverythingSuckz/TG-FileStreamBot
+git clone https://github.com/yanjie233/TG-FileStreamBot
 cd TG-FileStreamBot
 ```
 
@@ -161,7 +161,7 @@ docker run --env-file fsb.env ghcr.io/everythingsuckz/fsb:latest
 > 参考 https://stackoverflow.com/a/17566846/15807350
 
 ```sh
-git clone https://github.com/EverythingSuckz/TG-FileStreamBot
+git clone https://github.com/yanjie233/TG-FileStreamBot
 cd TG-FileStreamBot
 go build ./cmd/fsb/
 chmod +x fsb
@@ -179,7 +179,7 @@ nano fsb.env
 > 需安装 go 1.21 及以上版本。
 
 ```powershell
-git clone https://github.com/EverythingSuckz/TG-FileStreamBot
+git clone https://github.com/yanjie233/TG-FileStreamBot
 cd TG-FileStreamBot
 go build ./cmd/fsb/
 Rename-Item -LiteralPath ".\fsb.sample.env" -NewName ".\fsb.env"
