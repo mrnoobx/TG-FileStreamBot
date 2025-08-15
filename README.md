@@ -24,6 +24,9 @@
 > [!NOTE]
 > 汉化仅限Go语言(Docker不算) 可在Releases获得二进制文件进行安装。
 
+> [!NOTE]
+> 如果你想在国内的vps使用这个机器人你可以自行魔改代码使用我的镜像站 https://tgapi-cn.91video.ggff.net
+
 <hr>
 
 <details open="open">
