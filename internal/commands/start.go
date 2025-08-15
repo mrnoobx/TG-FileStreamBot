@@ -23,9 +23,9 @@ func start(ctx *ext.Context, u *ext.Update) error {
 		return dispatcher.EndGroups
 	}
 	if len(config.ValueOf.AllowedUsers) != 0 && !utils.Contains(config.ValueOf.AllowedUsers, chatId) {
-		ctx.Reply(u, "啊哦哦，你没有权限使用我呀~联系一下管理员叭~", nil)
+		ctx.Reply(u, "Oops, you don't have permission to use me. Please contact the administrator.", nil)
 		return dispatcher.EndGroups
 	}
-	ctx.Reply(u, "嗨，欢迎使用TgfileBot，你只需要丢进来图片、视频或者其他文件我都可以帮你转换成链接喔~", nil)
+	ctx.Reply(u, "𖦹 Sᴇɴᴅ ᴀɴʏ ғɪʟᴇ ᴀɴᴅ I’ʟʟ ɪɴsᴛᴀɴᴛʟʏ ɢᴇɴᴇʀᴀᴛᴇ ᴀ sʜᴀʀᴇᴀʙʟᴇ ʟɪɴᴋ ғᴏʀ ʏᴏᴜ ⁀જ➣", nil)
 	return dispatcher.EndGroups
 }
