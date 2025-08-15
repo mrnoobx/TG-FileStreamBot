@@ -83,14 +83,14 @@ func sendLink(ctx *ext.Context, u *ext.Update) error {
 	row := tg.KeyboardButtonRow{
 		Buttons: []tg.KeyboardButtonClass{
 			&tg.KeyboardButtonURL{
-				Text: "立即下载⤵️",
+				Text: "Download Now⤵️",
 				URL:  link + "&d=true",
 			},
 		},
 	}
 	if strings.Contains(file.MimeType, "video") || strings.Contains(file.MimeType, "audio") || strings.Contains(file.MimeType, "pdf") {
 		row.Buttons = append(row.Buttons, &tg.KeyboardButtonURL{
-			Text: "在线播放🎦",
+			Text: "Play online🎦",
 			URL:  link,
 		})
 	}
